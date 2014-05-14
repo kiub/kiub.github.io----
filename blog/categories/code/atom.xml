@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Code | A Code Blog]]></title>
+  <link href="http://kiub.github.io/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://kiub.github.io/"/>
+  <updated>2014-05-14T18:13:27-04:00</updated>
+  <id>http://kiub.github.io/</id>
+  <author>
+    <name><![CDATA[Kiubmen]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[javaScript Objects]]></title>
+    <link href="http://kiub.github.io/year/month/day/title.html"/>
+    <updated>2014-05-14T12:37:12-04:00</updated>
+    <id>http://kiub.github.io/year/month/day/javascript-objects</id>
+    <content type="html"><![CDATA[<p>Los objetos tienen atributos y métodos, el siguiente ejemplo me aclaró la lógica de la programació orientada a objetos (). En este caso utilizamos un constructor e instanciamos.</p>
+
+<p>``` javascript create object
+// make a constructor function
+function Car(model, wheels, seats, doors, year){</p>
+
+<pre><code>this.model = model;
+this.wheels = wheels;
+this.seats = seats;
+this.doors = doors;
+this.year = year;
+</code></pre>
+
+<p>}
+// new object instances
+var sentra = new Car(&lsquo;Sentra 1999&rsquo;, &lsquo;4&rsquo;, &lsquo;5&rsquo;, &lsquo;1999&rsquo;);
+var reliant = new Car(&lsquo;Rialto&rsquo;, &lsquo;3&rsquo;, &lsquo;2&rsquo;, &lsquo;1983&rsquo;);
+// output object attr
+sentra.wheels // 4
+reliant.wheels // 3
+```</p>
+
+<h4>Añadiendo metodos a nuestro objeto</h4>
+
+<p>El siguiente ejemplo se basa en la clasificación de &ldquo;Antique Vehicle&rdquo; en la Florida</p>
+
+<blockquote><p>In Florida, an antique vehicle is defined as any motor vehicle that was manufactured after 1945 and is at least thirty years old.</p></blockquote>
+
+<p>Creamos una nueva funcion que calcule cuantos años faltan para clasificar basandonos en los 30 años de antigüedad
+``` javascript create new method
+function yearsToAntic(){</p>
+
+<pre><code>var now = new Date();
+var numYears = now.getFullYear() - this.year;
+if (numYears &gt;= 30 ){
+    return 'It is Antique';
+} else {
+    return 'Not Antique';
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Añadimos el método al nuestro constructor</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>add method to object </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span> <span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">doors</span><span class="p">,</span> <span class="nx">year</span><span class="p">){</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">model</span><span class="p">;</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">doors</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">;</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// new method. Atention! not include parentesis to the end</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">antique</span> <span class="o">=</span> <span class="nx">yearsToAntic</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Ahora podemos llamar al nuevo metodo perteneciente al objeto. Hemos de tener cuidado con la sintaxis ya que hemos de añadir los parentesís al método a diferencia del atributo que no lo lleva <code>code</code>.</p>
+
+<p><code>javascript add method to object
+reliant.antique() // It is Antique
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

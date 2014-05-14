@@ -9,8 +9,7 @@
   <meta name="author" content="Kiubmen">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Los objetos tienen atributos y métodos, el siguiente ejemplo me aclaró la lógica de la programació orientada a objetos (). En este caso utilizamos un &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/14/javascript-objects/">javaScript Objects</a></h1>
+      <h1 class="entry-title"><a href="/year/month/day/title.html">javaScript Objects</a></h1>
     
     
       <p class="meta">
@@ -95,7 +94,100 @@
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>Los objetos tienen atributos y métodos, el siguiente ejemplo me aclaró la lógica de la programació orientada a objetos (). En este caso utilizamos un constructor e instanciamos.</p>
+
+<figure class='code'><figcaption><span>create object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// make a constructor function</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span> <span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">doors</span><span class="p">,</span> <span class="nx">year</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">model</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">doors</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// new object instances</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">sentra</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s1">&#39;Sentra 1999&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;1999&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">reliant</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="s1">&#39;Rialto&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;1983&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="c1">// output object attr</span>
+</span><span class='line'><span class="nx">sentra</span><span class="p">.</span><span class="nx">wheels</span> <span class="c1">// 4</span>
+</span><span class='line'><span class="nx">reliant</span><span class="p">.</span><span class="nx">wheels</span> <span class="c1">// 3</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Añadiendo metodos a nuestro objeto</h4>
+
+<p>El siguiente ejemplo se basa en la clasificación de &ldquo;Antique Vehicle&rdquo; en la Florida</p>
+
+<blockquote><p>In Florida, an antique vehicle is defined as any motor vehicle that was manufactured after 1945 and is at least thirty years old.</p></blockquote>
+
+<p>Creamos una nueva funcion que calcule cuantos años faltan para clasificar basandonos en los 30 años de antigüedad</p>
+
+<figure class='code'><figcaption><span>create new method</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">yearsToAntic</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">numYears</span> <span class="o">=</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">()</span> <span class="o">-</span> <span class="k">this</span><span class="p">.</span><span class="nx">year</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">numYears</span> <span class="o">&gt;=</span> <span class="mi">30</span> <span class="p">){</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;It is Antique&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;Not Antique&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Añadimos el método al nuestro constructor</p>
+
+<figure class='code'><figcaption><span>add method to object </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">function</span> <span class="nx">Car</span><span class="p">(</span><span class="nx">model</span><span class="p">,</span> <span class="nx">wheels</span><span class="p">,</span> <span class="nx">seats</span><span class="p">,</span> <span class="nx">doors</span><span class="p">,</span> <span class="nx">year</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">model</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">wheels</span> <span class="o">=</span> <span class="nx">wheels</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">seats</span> <span class="o">=</span> <span class="nx">seats</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">doors</span> <span class="o">=</span> <span class="nx">doors</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">// new method. Atention! not include parentesis to the end</span>
+</span><span class='line'>  <span class="k">this</span><span class="p">.</span><span class="nx">antique</span> <span class="o">=</span> <span class="nx">yearsToAntic</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ahora podemos llamar al nuevo metodo perteneciente al objeto. Hemos de tener cuidado con la sintaxis ya que hemos de añadir los parentesís al método a diferencia del atributo que no lo lleva <code>code</code>.</p>
+
+<figure class='code'><figcaption><span>add method to object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">reliant</span><span class="p">.</span><span class="nx">antique</span><span class="p">()</span> <span class="c1">// It is Antique</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -116,7 +208,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/14/javascript-objects/">javaScript Objects</a>
+        <a href="/year/month/day/title.html">javaScript Objects</a>
       </li>
     
   </ul>
@@ -153,9 +245,9 @@
 
 
 
-<section class="googleplus">
+<section class="googleplus googleplus-hidden">
   <h1>
-    <a href="https://plus.google.com/kiubmen?rel=author">
+    <a href="https://plus.google.com/kiubmen@gmail.com?rel=author">
       <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
       Google+
     </a>
@@ -182,16 +274,6 @@
 
 
 
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
