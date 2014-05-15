@@ -4,7 +4,7 @@
   <title><![CDATA[A Code Blog]]></title>
   <link href="http://kiub.github.io/atom.xml" rel="self"/>
   <link href="http://kiub.github.io/"/>
-  <updated>2014-05-14T18:13:27-04:00</updated>
+  <updated>2014-05-15T16:21:23-04:00</updated>
   <id>http://kiub.github.io/</id>
   <author>
     <name><![CDATA[Kiubmen]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[javaScript Objects]]></title>
-    <link href="http://kiub.github.io/year/month/day/title.html"/>
+    <link href="http://kiub.github.io/blog/2014/05/14/javascript-objects/"/>
     <updated>2014-05-14T12:37:12-04:00</updated>
-    <id>http://kiub.github.io/year/month/day/javascript-objects</id>
+    <id>http://kiub.github.io/blog/2014/05/14/javascript-objects</id>
     <content type="html"><![CDATA[<p>Los objetos tienen atributos y métodos, el siguiente ejemplo me aclaró la lógica de la programació orientada a objetos (). En este caso utilizamos un constructor e instanciamos.</p>
 
 <figure class='code'><figcaption><span>create object</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

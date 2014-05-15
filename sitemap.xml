@@ -1,19 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://kiub.github.io/year/month/day/title.html</loc>
-        <lastmod>2014-05-14T18:08:48-04:00</lastmod>
+        <loc>http://kiub.github.io/blog/2014/05/14/javascript-objects/</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/about.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/components.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/css.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/customize.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/getting-started.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/</loc>
+        <lastmod>2014-05-15T14:45:03-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/javascript.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/assets/bootstrap/docs/migration.html</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://kiub.github.io/blog/archives/</loc>
-        <lastmod>2014-05-14T18:08:48-04:00</lastmod>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kiub.github.io/blog/categories/</loc>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://kiub.github.io/</loc>
-        <lastmod>2014-05-14T18:08:48-04:00</lastmod>
+        <lastmod>2014-05-15T15:45:12-04:00</lastmod>
     </url>
     <url>
         <loc>http://kiub.github.io/robots.txt</loc>
-        <lastmod>2014-05-14T11:48:27-04:00</lastmod>
+        <lastmod>2014-05-15T14:45:03-04:00</lastmod>
     </url>
 </urlset>
