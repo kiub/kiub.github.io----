@@ -2,7 +2,7 @@
 layout: post
 title: "javaScript Objects"
 date: 2014-05-14 12:37:12 -0400
-permalink: /year/month/day/title.html
+#permalink: /year/month/day/title.html
 published: true
 comments: false
 # Multiple categories

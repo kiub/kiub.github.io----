@@ -4,10 +4,16 @@
 
 url: http://kiub.github.io
 title: A Code Blog
-subtitle: Tips Snippets and something else.
+subtitle: Just to not forget.
 author: Kiubmen
 simple_search: https://www.google.com/search
-description:
+description: Tips Snippets and something else
+
+#email: kiubmen@gmail.com
+email_md5: 070d12d9072783c10aeecd9051202d2d
+
+#email: pavel.duran@gmail.com
+#email_md5: aae4ad8a91377313698a253833398e83
 
 # github repo
 # git@github.com:kiub/kiub.github.io.git
@@ -36,12 +42,18 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
+#markdown: kramdown
+# kramdown:
+#   use_coderay: true
+#   coderay:
+#     coderay_line_numbers: table
+#     coderay_css: class
 markdown: rdiscount
 rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+ extensions:
+   - autolink
+   - footnotes
+   - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
